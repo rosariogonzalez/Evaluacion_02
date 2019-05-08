@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+	background:silver;
+}
+
+
+h2{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+}
+
 #menu{
 	position: fixed;
 	bottom:2rem;
 	right:2.5rem;
 }
+
+.bg-azul {
+	background: rgba(66,81,82,1.00);
+}
+
