@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 body {
-	background:silver;
+	background: silver;
 }
 
 html , body {
@@ -13,24 +13,46 @@ html , body {
 body {
 
 	background: rgba(159,171,170)
+	background-attachment: fixed;
 
 }
 
-h1 {font-family: 'Roboto Slab', serif;
+h1 {
+	font-family: 'Roboto Slab', serif;
+	color: lightseagreen;
 	font-weight: 400
+
+
 
 }
 
 h2{
+	
 	font-family: 'Open Sans Condensed', sans-serif;
 
 
 }
+
+h3,h4,h5,h6 {
+
+font-family: 'Open Sans Condensed', sans-serif;
+	color: lightseagreen ;
+	font-size: xx-large;
+	font-weight: 400
+
+}
+
+
 #menu{
 	position: fixed;
 	bottom:2rem;
 	right:2.5rem;
 }
+
+img {
+	border:5px solid slategrey;
+}
+
 
 .bg-azul {
 	background: rgba(66,81,82,1.00);
