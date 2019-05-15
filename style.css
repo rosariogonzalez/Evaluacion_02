@@ -1,15 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 body {
 	background:silver;
 }
 
+html , body {
+	min-height : 100% ;
 
-h2{
-	font-family: 'Roboto Slab', serif;
-	font-weight: 400;
 }
 
+body {
+
+	background: rgba(159,171,170)
+
+}
+
+h1 {font-family: 'Roboto Slab', serif;
+	font-weight: 400
+
+}
+
+h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+
+
+}
 #menu{
 	position: fixed;
 	bottom:2rem;

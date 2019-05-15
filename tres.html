@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Evaluacion 2</title>
+    <title>Portafolios curso</title>
   </head>
   <body>
     <div class="container">
@@ -27,52 +27,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- después de ir por las bibliotecas, puedes aprovecharlas-->
     <script>
-      var a = ["Hola mundo!","Adios mundo cruel!"] 
-     
-
-      var b = {saludo:"Hola mundo!", despedida :"Holiwi mundiwi!"}
       
-      var c = [
-      {saludo:"hola mundo" , chroma:"red"},
-      {saludo: "hola" , chroma : "blue" },
-      {saludo: "h..." , chroma :"green"}
-      ]
-
-      var curso = [
-      {nombre: "Rosario González", 
-      ingreso:2016,
-
-      trabajos : [
-      {titulo:"RAF l Diseño de emergencias l ",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo2.jpg"},
-
-      {titulo:"MAEZ l Diseño de marca para emprendimiento l ",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo1.jpg"},
-
-      {titulo:"E&M l Luminaria de Yeso l ",imagen:"https://raw.githubusercontent.com/rosariogonzalez/Evaluacion_02/gh-pages/IMG/trabajo3.jpg"} , 
-
-      ]
-      }, 
-
-      {nombre:"Dominga Zañartu",
-       ingreso: 2016,
-       trabajos: [
-       {titulo:"LA GUACHA",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-1.jpg"},
-       {titulo:"CERVEZAS +56",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-2.jpg"},
-       {titulo:"CAD CAM",imagen:"https://raw.githubusercontent.com/domingazanartu/ev2/gh-pages/IMG/trabajo-3.jpg"},
-        ]
-      }, 
-
-
-      {nombre:"Francisca López de Heredia",
-      ingreso:2016,
-      trabajos:[
-      {titulo:"Diseño de producto",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img1.jpg"},
-      {titulo:"Branding",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img2.jpg"},
-      {titulo:"Modelado 3D",imagen:"https://raw.githubusercontent.com/Franciscaldeh/ev2/gh-pages/img/img3.jpg"}
-      ]
-    }
-    ]
-
-      
+      $.getJSON( "https://raw.githubusercontent.com/profesorfaco/dno037-2019/gh-pages/portfolio.json", function( curso ) {
 
 
 
@@ -80,10 +36,11 @@
        $.each(curso, function(i, integrante) {
             $("#cuestiones").append("<h2 class ='mt-5 bg-info text-white'>" + integrante.nombre + "</h2>");
           $.each(integrante.trabajos, function(i, trabajo) {
-              $("#cuestiones").append("<h5 class='border-top my-2 py-3'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "'class='img-fluid border-botton pb-3 mb-3'>");
+              $("#cuestiones").append("<h5 class='border-top my-2 py-3'>" + trabajo.titulo + "</h5>").append("<img src='" + trabajo.imagen + "'class='img-fluid mb-3'>").append ("<p>" + trabajo.descriptor);
           });
-        });
 
+        });
+}); 
     </script>
   </body>
 </html>
